@@ -150,12 +150,12 @@ train_datagen = ImageDataGenerator(
         horizontal_flip=True)
 test_datagen = ImageDataGenerator(rescale=1./255)
 training_set = train_datagen.flow_from_directory(
-        '/root/stote/cnn_dataset/training_set/',
+        '/root/store/cnn_dataset/training_set/',
         target_size=(64, 64),
         batch_size=32,
         class_mode='binary')
 test_set = test_datagen.flow_from_directory(
-        '/root/stote/cnn_dataset/test_set/',
+        '/root/store/cnn_dataset/test_set/',
         target_size=(64, 64),
         batch_size=32,
         class_mode='binary')
@@ -194,7 +194,7 @@ from keras.preprocessing import image
 # In[28]:
 
 
-test_image = image.load_img('/root/stote/cnn_dataset/single_prediction/cat_or_dog_2.jpg', 
+test_image = image.load_img('/root/store/cnn_dataset/single_prediction/cat_or_dog_2.jpg', 
                target_size=(64,64))
 
 
